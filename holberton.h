@@ -18,5 +18,6 @@ typedef struct print_types
 } pr_tp;
 
 int _printf(const char *format, ...);
+int _putchar(char c);
 
 #endif
