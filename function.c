@@ -32,3 +32,9 @@ int _pr_string(va_list arg)
 	}
 	return (_strlen(s));
 }
+
+int _pr_percent()
+{
+	_putchar(37);
+	return (1);
+}

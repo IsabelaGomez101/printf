@@ -12,6 +12,7 @@ int (*get_function(const char *format))(va_list arg)
 	pr_tp prt[] = {
 		{"c", _pr_char},
 		{"s", _pr_string},
+		{"%", _pr_percent},
 		{NULL, NULL},
 
 	};
