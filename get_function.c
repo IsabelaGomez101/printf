@@ -7,7 +7,7 @@
  */
 
 
-int (get_function(const char *format))(va_list arg)
+int (*get_function(const char *format))(va_list arg)
 {
 	pr_tp prt[] = {
 		{"c", _pr_char},

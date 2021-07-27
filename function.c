@@ -23,7 +23,7 @@ return (1);
 int _pr_string(va_list arg)
 {
 	int i;
-	char s = va_arg(arg, char);
+	char *s = va_arg(arg, char *);
 
 	for (i = 0; i < _strlen(s); i++)
 	{
