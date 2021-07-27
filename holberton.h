@@ -14,10 +14,17 @@
 typedef struct print_types
 {
 	char *tp;
-	void (*f)(va_list arg);
+	int (*f)(va_list arg);
 } pr_tp;
 
-int _printf(const char *format, ...);
+/*PROTOTYPES*/
 int _putchar(char c);
+int _strlen(char *s);
+int _printf(const char *format, ...);
+int (*get_function(const char *format))(va_list arg);
+
+/*Prototypes file functions*/
+int _pr_char(va_list arg);
+int _pr_string(va_list arg);
 
 #endif
