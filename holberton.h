@@ -26,5 +26,5 @@ int (*get_function(const char *format))(va_list arg);
 /*Prototypes file functions*/
 int _pr_char(va_list arg);
 int _pr_string(va_list arg);
-int _pr_percent();
+int _pr_percent(void);
 #endif
