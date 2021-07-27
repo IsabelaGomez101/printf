@@ -37,6 +37,5 @@ int _printf(const char *format, ...)
 	}
 	va_end(arg);
 	len--;
-	printf("%d y %d ", len, t_len);
 	return (len + t_len);
 }
