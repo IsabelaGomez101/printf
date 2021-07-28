@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include <stdio.h>
 
 /**
  * _printf - function that prints anything.
@@ -23,7 +22,6 @@ int _printf(const char *format, ...)
 			_putchar(format[i]);
 			len++;
 		}
-	/**linea borrada*/
 		else if (format[i] == '%' && format[i + 1] == '\0')
 			return (-1);
 		else if (format[i] == '%')
@@ -38,6 +36,5 @@ int _printf(const char *format, ...)
 		i++;
 	}
 	va_end(arg);
-	printf("%d", len + t_len);
 	return (len + t_len);
 }
