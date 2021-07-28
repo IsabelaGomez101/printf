@@ -30,7 +30,9 @@ int _printf(const char *format, ...)
 			if (f == NULL)
 				t_len += _pr_anything(format, (i + 1));
 			else
+			{
 				t_len += f(arg);
+			}
 			i++;
 		}
 		i++;
