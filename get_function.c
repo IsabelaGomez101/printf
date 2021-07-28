@@ -31,3 +31,16 @@ int (*get_function(const char *format))(va_list arg)
 	}
 	return (prt[j].f);
 }
+
+/**
+ * _pr_anything - function that print anything last percent.
+ * @format: string of characters to be printed.
+ * @i: position in format.
+ * Return: integer.
+ */
+int _pr_anything(const char *format, int i)
+{
+	_putchar(37);
+	_putchar(format[i]);
+	return (2);
+}
