@@ -3,8 +3,7 @@
 
 #include <stdarg.h>
 #include <stdlib.h>
-#include <stddef.h>
-#include <stdio.h>
+
 
 /**
  * struct print_types- structure that containing two variables
