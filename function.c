@@ -18,9 +18,10 @@ int _pr_string(va_list arg)
 {
 	int i = 0;
 	char *s = va_arg(arg, char *);
+
 	if (s == NULL)
 	{
-		s = "null";
+		s = "(null)";
 	}
 	while (s[i])
 	{
@@ -49,6 +50,7 @@ int _pr_numbers(va_list arg)
 	int div = 1;
 	int n, digit;
 	int l = 0;
+	
 	if (num < 0)
 	{
 		_putchar('-');
