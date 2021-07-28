@@ -4,7 +4,6 @@
 #include <stdarg.h>
 #include <stdlib.h>
 
-
 /**
  * struct print_types- structure that containing two variables
  * @tp: Type of argument.
@@ -27,4 +26,6 @@ int _pr_anything(const char *format, int i);
 int _pr_char(va_list arg);
 int _pr_string(va_list arg);
 int _pr_percent(void);
+int _pr_numbers(va_list arg);
+
 #endif
