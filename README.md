@@ -48,7 +48,7 @@ The following are the specifiers for format that you can use:
 | "c" | output of a character |
 | "s" | output of a string |
 | "d" | output of an integer |
-| "i" | output of an integer unsigned |
+| "i" | output of an integer |
 | "% | output output character percentage |
 
 ## Files used for our function
@@ -75,9 +75,32 @@ functions it contains:
 * **_printf:** This file contains our main function.
 
 To compile our function you can use the following command
-```
-gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c
-```
+  ```
+  gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c
+  ```
+
+## Examples
+
+To print phrases:
+   ```
+   #include "holberton.h"
+   _printf("If you can dream it, you can get it\n");
+   ```
+
+To print string and character with format specifier:
+   ```
+   #include "holberton.h"
+   _printf("The word: %s, starts with the letter: %c.\n", "Holberton", 'H');
+   ```
+output: The word: Holberton, starts with the letter: H.
+
+To print a number (month, day and year are variable):
+   ```
+   #include "holberton.h"
+   _printf("Today is %s %d of the year %d.", month, day, year);
+   ```
+output: Today is July 28 of the year 2021.
+
 ## Flowchart
 
 To understand how our function works, check the flowchart.
