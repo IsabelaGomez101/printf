@@ -17,12 +17,11 @@ typedef struct print_types
 
 /*PROTOTYPES*/
 int _putchar(char c);
-int _strlen(char *s);
 int _printf(const char *format, ...);
 int (*get_function(const char *format))(va_list arg);
 int _pr_anything(const char *format, int i);
 
-/*Prototypes file functions*/
+/*Prototypes file function*/
 int _pr_char(va_list arg);
 int _pr_string(va_list arg);
 int _pr_percent(void);
