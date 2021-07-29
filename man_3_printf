@@ -2,27 +2,24 @@
 .SH NAME
 .B _printf
 inbuilt library function in C which is available in C library by
-
 default.
 
 .SH SYNOPSIS
 .B  #include "holberton.h"
+.br
 int _printf(const char *format, ...);
 
 .SH DESCRIPTION
-.PP The functions in the _printf()  produce output according to a
-
+The function in the _printf() produce output according to a
 format. write output to stdout.
 .br
-this function writes the output under the control of a format string
+This function writes the output under the control of a format string
+that specifies how subsequent arguments (or arguments accessed through
+.B stdarg (3)
+variable-length argument functions) are converted for the output.
 
-that specifies how subsequent arguments (or arguments accessed
-
-through
-.B stdarg (3) variable-length argument functions) are converted for the
-
-output.
 .SS Conversion specifiers
+
 After the % character, the character that specifies the type of conversion to be applied is added.
 The conversion specifiers and their meanings are:
 .TP
@@ -38,35 +35,56 @@ A pointer to an array of character type (pointer to a string).
 Characters from the array are written up to (but not including) a terminating null
 byte ('\0'); if a precision is specified, no more than the number specified are written.
 .TP
-.B -p
-I. The void *
-if by %#x or %#lx).
-.TP
 .B  -%
-A '%' is written.  No argument is converted.  The complete conversion
-
-specification is '%%'.
+A '%' is written.  No argument is converted.  The complete conversion specification is '%%'.
 .br
+
 .SH FILES
 .TP
 .B function.c
+.TP
 .B get_function.c
+.TP
 .B holberton.h
+.TP
+.B _putchar.c
+.TP
+.B _printf.c
 
 .SH RETURN VALUE
 Upon successful return, these functions return the number of characters printed
 (excluding the null byte used to end output to strings).
 
+.SH EXAMPLES
+-To print phrases:
+.br
+
+#include "holberton.h"
+.br
+_printf("If you can dream it, you can get it");
+.br
+
+-To print string with format specifier:
+.br
+
+#include "holberton.h"
+.br
+_printf("The word:[%s] starts with the letter:[%c]\n", "Holberton", 'H');
+.br
+
+-To print a number:
+.br
+
+#include "holberton.h"
+.br
+_printf("today is %s %d of the year %d", month, day, year);
+
+
 .SH SEE ALSO
 .B man 3 printf.
 
-.SH EXAMPLES
-to print phrases:
-_printf("If you can dream it, you can get it").
-.br
-to print Number:
 
 .SH AUTHORS
-.B IsabelaGomez101
+.B Laura Isabela Gomez - IsabelaGomez101
 .br
-.B knia10
+.B Estefania Ruiz Acevedo - knia10
