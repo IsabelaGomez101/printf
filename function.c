@@ -50,7 +50,7 @@ int _pr_numbers(va_list arg)
 	int div = 1;
 	int n, digit;
 	int l = 0;
-	
+
 	if (num < 0)
 	{
 		_putchar('-');
