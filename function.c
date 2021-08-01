@@ -53,14 +53,16 @@ int l = 0;
 
 uldig = num % 10; /**variable que guarda el ultimo digito*/
 num = num / 10;
-if (num < 0)
+if (uldig < 0)
 {
-_putchar('-');
 num = num * -1;
 uldig = uldig * -1;
+_putchar('-');
 l++;
 }
 n = num;
+if (n > 0)
+{
 while ((num / 10) != 0)
 {
 num = num / 10;
@@ -74,7 +76,9 @@ n = n % div;
 div = div / 10;
 l++;
 }
+}
 _putchar(uldig + '0');
 l++;
 return (l);
 }
+
