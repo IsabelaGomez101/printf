@@ -46,30 +46,35 @@ int _pr_percent(void)
  */
 int _pr_numbers(va_list arg)
 {
-	int num = va_arg(arg, int);
-	int div = 1;
-	int n, digit;
-	int l = 0;
+int num = va_arg(arg, int);
+int div = 1;
+int n, digit, uldig;
+int l = 0;
 
-	if (num < 0)
-	{
-		_putchar('-');
-		num = num * -1;
-		l++;
-	}
-	n = num;
-	while ((num / 10) != 0)
-	{
-		num = num / 10;
-		div *= 10;
-	}
-	while (div >= 1)
-	{
-		digit = n / div;
-		_putchar(digit + '0');
-		n = n % div;
-		div = div / 10;
-		l++;
-	}
-	return (l);
+uldig = num % 10; /**variable que guarda el ultimo digito*/
+num = num / 10;
+if (num < 0)
+{
+_putchar('-');
+num = num * -1;
+uldig = uldig * -1;
+l++;
+}
+n = num;
+while ((num / 10) != 0)
+{
+num = num / 10;
+div *= 10;
+}
+while (div >= 1)
+{
+digit = n / div;
+_putchar(digit + '0');
+n = n % div;
+div = div / 10;
+l++;
+}
+_putchar(uldig + '0');
+l++;
+return (l);
 }
